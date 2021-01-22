@@ -1,0 +1,83 @@
+Job Posting Logic/process 
+...................................................
+
+step 1............create a table with the following fields (postingjobs) table
+id int 11
+user_id int 11
+user_name Varchar 256
+user_Email Varchar 256
+Company_name Varchar 256
+Job Description Longtext
+Job Salary Varchar 256
+Job location Varchar 256
+Contact_email varchar
+contact_person user_name on pillersmaker varchar
+application_duration Varchar
+job_close int default 0
+
+step 2............applied job (appliedjob) table
+id int 11
+applicant_id = user_id = $_SESSION['USER_ID'];
+job_post_id = id in postingjob Table id int 11
+date_applied varchar 256
+Description = description of yourself as been worthy of this employment.
+
+
+NOTE------when services menu is clicked there will be options for job-posting
+when that is clicked you will be taking to a page that has a form and also displayed you created jobs and numbers of applicants are showed per job
+
+this will also show all job you have created and the once you have been called for interview.
+
+step 3..........(myJobs.php)
+start session
+confirm paid member
+confirmed session
+require all files 
+
+//get the following from $_SESSION;
+user_id int 11
+user_name Varchar 256
+user_Email Varchar 256
+
+//create a form to collect all this
+Company_name Varchar 256
+Job Description Longtext
+Job Salary Varchar 256
+Job location Varchar 256
+Contact_email varchar
+contact_person user_name on pillersmaker varchar
+application_duration Varchar
+job_close int default 0
+job_posted/display int default 1
+
+//under the form logic to displaid all the jobs you have created and those you have applied for will display as link each.
+
+// 
+ 1-----query database for job created by you then display it.
+    =====each can be click for edit, delete or not to display in job listing. 
+            **Edit click
+            goto editMYJob.php
+            form will display with the information before.
+
+            **DELETE click
+            goto (deleteMyJob.php)
+            Job is deleted in job table and other table attached to it
+2------query database for job you applied for then display it
+    =====each can be click for edit and delete
+            **Edit click
+        goto editMYJob.php
+        form will display with the information before.
+
+        **DELETE click
+        goto (deleteMyJob.php)
+        Job is deleted in job table and other table attached to it
+
+step 4............in the explore under any talent job button is there when clicked (displayJobs.php) is dispalyed. there should be a button for list all jobs from all categories.
+
+the logic goes like the following
+
+query database for all jobs
+dispay those jobs with (foreach) statement
+
+....ignore jobs that you have applied for
+....list job for category of talent you are requesting for

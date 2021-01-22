@@ -1,0 +1,5 @@
+[15-Oct-2019 17:26:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function execute() on boolean in /home/pillersm/public_html/pagination/paginationCategory.php:109
+Stack trace:
+#0 /home/pillersm/public_html/art/artPost.php(19): pagination('Art and Grahics', 'postworks')
+#1 {main}
+  thrown in /home/pillersm/public_html/pagination/paginationCategory.php on line 109

@@ -1,0 +1,101 @@
+body, html{
+    background-color: rgb(53, 49, 49);
+   
+}
+
+#homepicture{
+    width:200px;
+    height: 150px;
+    margin-bottom: 30px;
+    padding-top:0 30px; 
+    
+     
+}
+
+#no-repeat{
+    background-image: no-repeat;
+}
+
+#postimages{
+    width: 100%;
+    height: 120px;
+    padding:10px;
+}
+
+#read, a{
+    text-decoration: none;
+    color:green;
+    
+}
+
+#menu_ajust1{
+    color:white;
+}
+
+#menu_ajust2{
+
+}
+
+.hover{
+    color:gray;
+}
+
+
+.hover:hover{
+    color:white;
+}
+
+/* copied from file */
+
+.center-col{
+    float:none !important ; 
+    margin: 0 auto; 
+}
+
+.menu{
+    padding:5px 15px;
+    color:white;
+    background-color:green;
+    border-right:1px solid brown ;
+    margin:0px;
+    border-bottom-left-radius:10px;
+}
+
+.menu:hover{
+    padding:5px 15px;
+    color:white;
+    opacity:0.9;
+    background-color:green;
+    border-right:3px solid brown ;
+    cursor:pointer;
+}
+
+.like-menu{   
+    color:black;
+    /* margin:5px 5px 5px 0px; */
+    background-color:gold;
+    border:1px dotted white ;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.connet-menu{
+    text-decoration:none;
+    padding:5px 15px;
+    margin:5px 5px 5px 0px;
+    cursor:pointer;
+}
+
+.line-h{
+    line-height: 0.5px;
+}
+
+.line-h-ajusted{
+    line-height: 17px;
+}
+
+
+p{
+    font-size:15px;
+}

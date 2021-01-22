@@ -1,0 +1,126 @@
+Escrow Proccess and logic flow
+..............................................
+
+create a table with the following field
+
+ESCROW SHOP TABLE
+id
+buyer_id int
+buyer_name Varchar
+buyer_email Varchar
+seller_email Varchar
+productService_id int
+productService_price int
+product_description Long-text
+purchase_date Varchar
+agreed_delivery_date Varchar
+open_ticket int default 1
+order_payment int default 0
+truncate ticket 0
+seller_agree_to_sale int default 0
+
+Logics
+VISIBLE TO BUYER 
+everything and the following
+order payment button
+
+
+
+VISIBLE TO SELLER
+everything/information and the following.
+
+truncate ticket
+seller_agree_to_sale
+
+
+
+VISIBLE TO ADMIN
+everything and the following.
+truncate ticket
+admin can change delivery date.
+close ticket.
+
+PAge1....//escrow view page escrowPage.php
+create a form with the following field
+
+seller email 
+product Service price text
+product description textarea
+agreed delivery date int (5 or 6)
+users pin
+
+
+
+Page2//code Logics Open Escrow ticket escrowProcess.php
+
+check session
+check paid member
+require connection
+require header
+
+get buyer/user datas from SESSION
+buyer_id int
+buyer_name Varchar
+buyer_email Varchar
+confirm pin --- if pin OK then Continue
+.//
+
+get product information fron POST
+seller_email 
+productService_price 
+product_description 
+agreed_delivery_date 
+.//
+
+Create the following with code
+productService_id int       --- user_id + buyer_id + date('U')
+purchase_date Varchar       --- present day
+open_ticket                 --- set to 1
+order_payment               --- set to 0
+truncate ticket 0           --- set to 0
+
+query to get seller data by email supplied
+/////if seller exist then
+set seller email
+set seller id
+set seller user_name
+set amount
+set charges 3% Note get service from sitesettings table
+
+check buyer pvc account for amount + charges(3%)
+charge pvc the buyer + 3% of total amount of good/service
+update vote_coin_history
+update vote_coin_table
+
+
+INSERT datas into Escrowtable
+
+//END insertion
+
+Page3...check ticket_page
+all ticket you opened will show
+all ticket they open againt you will also show
+
+NOTE..each ticket can be clicked to view the full information
+
+Page4...if ticket you open is clicked
+it will display all information and give you the following button option.
+BUTTON order payment
+
+Page5...if ticket you open against you is clicked
+it will display all information and give you the following button option.
+BUTTON order payment
+
+truncate ticket
+seller_agree_to_sales
+
+
+Things to note
+....................................
+
+if deal is closed as complete deal can be deleted
+page to rate members service as a buyer and as a seller...rating is average 
+total rating total_rating / number_of_rating
+
+if ticket is opened for 3 days and seller did not respond to seller_agrre_to_sales then the ticked will automatically truncated and later deleted. 
+
