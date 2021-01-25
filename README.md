@@ -36,8 +36,15 @@ The way the site is built it favour talented skilled persons than been a user.
 Pillersmaker website code is placed here for new php student to learn fast and 
 they can easily bring vanilla php together to create a great site like pillersmaker.
 
-# thanks to the following
+# Note/Important
+the database to this site is not included in this upload, this is only for learning
+if you wish to work with the database contact me on ensodevonline@gmail.com
+
+To view this site and see more of it features i will be hosting back as soon
+as i can.
+
+# Many thanks to the following Youtube teachers and content creators
 * brad treversy
 * mmtut
-* my wife
+
 * others
