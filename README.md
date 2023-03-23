@@ -1,5 +1,5 @@
 # Pillersmaker
-Complete talent building and helping site with all social media features
+Talent support and helping social media Site
 
 This project is created with the following 
 
